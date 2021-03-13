@@ -1,4 +1,4 @@
-## ThingsToNeverForget
+## Things to Stop Googling
 
 ### Find the stuck CRD when a NS won't delete
 
