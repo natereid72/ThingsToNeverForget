@@ -11,3 +11,5 @@ Edit the prometheus object and configure these:
 externalUrl: http://example.com/prometheus
 
 routePrefix : prometheus/
+
+Do same for alertmanager
