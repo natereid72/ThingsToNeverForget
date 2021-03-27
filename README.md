@@ -7,5 +7,7 @@ for ns in $(kubectl get ns --field-selector status.phase=Terminating -o jsonpath
 ### Configure prometheus operated for ingress path
 
 Edit the prometheus object and configure these:
-    externalUrl: http://example.com/prometheus
-    routePrefix : prometheus/
+
+externalUrl: http://example.com/prometheus
+
+routePrefix : prometheus/
