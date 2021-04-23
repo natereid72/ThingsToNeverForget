@@ -13,3 +13,6 @@ externalUrl: http://example.com/prometheus
 routePrefix : prometheus/
 
 Do same for alertmanager
+
+### vSphere VCSA/ESXI setting for Intel CPU issue
+https://kb.vmware.com/s/article/55806
