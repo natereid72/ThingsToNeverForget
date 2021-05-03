@@ -2,7 +2,10 @@
 
 ### Find the stuck CRD when a NS won't delete
 
-for ns in $(kubectl get ns --field-selector status.phase=Terminating -o jsonpath='{.items[*].metadata.name}'); do  kubectl get ns $ns -ojson | jq '.spec.finalizers = []' | kubectl replace --raw "/api/v1/namespaces/$ns/finalize" -f -; done
+kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n <namespace>
+
+kubectl patch <type/name> -n <namespace> -p '{"metadata":{"finalizers":[]}}' --type=merge
+
 
 ### Configure prometheus operated for ingress path
 
