@@ -1,5 +1,8 @@
 ## Things to Stop Googling
 
+### Delete all evicted pods
+kubectl delete pods --field-selector=status.phase=Failed -A
+
 ### Find the stuck CRD when a NS won't delete
 
 kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n <namespace>
